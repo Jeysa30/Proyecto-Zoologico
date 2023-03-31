@@ -8,7 +8,7 @@
 
 using namespace std;
 
-/*Creación de la clase contenedora Zoológico.
+/* Clase contenedora Zoológico.
  * Habitat: creamos el vector para ir guardando los habitats de los animales.
  */
 

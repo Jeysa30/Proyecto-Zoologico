@@ -28,6 +28,42 @@ private:
     int cantDormir;
     int cantComer;
 
+public:
+    Animal() = default; //Constructor por defecto.
+
+    //-----Get y Set de nombre:
+    string getNombre();
+    void setNombre(string nombre);
+
+    //-----Get y Set de tipoAlimento:
+    string getTipoAlimento();
+    void setTipoAlimento(string tipoAlimento);
+
+    //-----Get y Set del id:
+    int getId();
+    void setId(int id);
+
+    //-----Get y Set de edad:
+    int getEdad();
+    void setEdad(int edad);
+
+    //-----Get y Set de estadoSalud:
+    int getEstadoSalud();
+    void setEstadoSalud(int estadoSalud);
+
+    //-----Get y Set de tipoAnimal:
+    int getTipoAnimal();
+    void setTipoAnimal(int tipoAnimal);
+
+    //-----Get y Set de cantDormir:
+    int getCantDormir();
+    void setCantDormir(int cantDormir);
+
+    //-----Get y Set de cantComer:
+    int getCantComer();
+    void setCantComer(int cantComer);
+
+
 };
 
 

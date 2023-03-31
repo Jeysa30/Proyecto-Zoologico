@@ -7,7 +7,7 @@
 
 using namespace std;
 
-/* Creación de la clase contenedora Habitat:
+/* Clase contenedora Habitat:
  * tipoHabitat: Donde se irá almacenando el nombre del habitat creado.
  * unordered_map(mapa desordenado): Donde se van guardando cada animal creado al mismo tiempo que su ID.
  * cantAnimales: Aquí se irá almacenando la cantidad de animales que el usuario coloque.
