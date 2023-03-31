@@ -1,0 +1,11 @@
+# ninja log v5
+1	1655	7019751432903177	CMakeFiles/Proyecto_Zoologico.dir/main.cpp.obj	ba147c72c6f33160
+1661	2275	7019751439232763	Proyecto_Zoologico.exe	fab7a2cb69e9c01e
+201	1941	7019797502509680	CMakeFiles/Proyecto_Zoologico.dir/Habitat.cpp.obj	ac49e6e70e7495e3
+36	1960	7019797502674261	CMakeFiles/Proyecto_Zoologico.dir/main.cpp.obj	ba147c72c6f33160
+70	1982	7019797503013747	CMakeFiles/Proyecto_Zoologico.dir/Zoo.cpp.obj	caa025b73cfe1653
+509	4917	7019798204109006	CMakeFiles/Proyecto_Zoologico.dir/Zoo.cpp.obj	caa025b73cfe1653
+66	5026	7019798205001609	CMakeFiles/Proyecto_Zoologico.dir/main.cpp.obj	ba147c72c6f33160
+5044	5825	7019798214019714	Proyecto_Zoologico.exe	c286dc604a4585e8
+38	1684	7019803046269993	CMakeFiles/Proyecto_Zoologico.dir/main.cpp.obj	ba147c72c6f33160
+1686	1960	7019803048934280	Proyecto_Zoologico.exe	c286dc604a4585e8
