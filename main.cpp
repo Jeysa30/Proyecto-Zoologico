@@ -15,6 +15,7 @@ void menuZoo(Zoo* zoologico){
         cout << "2. Agregar animal." << endl;
         cout << "3. Entra a un habitat (Ver o editar animales)." << endl;
         cout << "4. Acciones animales." << endl;
+        cout << "5. Ver informacion del zoológico" << endl;
         cout << "0. Salir del zoologico." << endl;
         cout << "Ingrese la opcion: \n";
         cin >> op;

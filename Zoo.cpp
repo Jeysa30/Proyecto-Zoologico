@@ -1,7 +1,3 @@
-//
-// Created by jeysa nahara on 31/03/2023.
-//
-
 #include "Zoo.h"
 
 

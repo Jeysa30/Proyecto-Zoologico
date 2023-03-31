@@ -67,6 +67,12 @@ build CMakeFiles/Proyecto_Zoologico.dir/Habitat.cpp.obj: CXX_COMPILER__Proyecto_
   OBJECT_DIR = CMakeFiles\Proyecto_Zoologico.dir
   OBJECT_FILE_DIR = CMakeFiles\Proyecto_Zoologico.dir
 
+build CMakeFiles/Proyecto_Zoologico.dir/Animal.cpp.obj: CXX_COMPILER__Proyecto_Zoologico_Debug C$:/Users/jeysa$ nahara/Documents/3er$ semestre/Progr.$ O/GIT/Proyecto-Zoologico/Animal.cpp || cmake_object_order_depends_target_Proyecto_Zoologico
+  DEP_FILE = CMakeFiles\Proyecto_Zoologico.dir\Animal.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Proyecto_Zoologico.dir
+  OBJECT_FILE_DIR = CMakeFiles\Proyecto_Zoologico.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Proyecto_Zoologico
@@ -75,7 +81,7 @@ build CMakeFiles/Proyecto_Zoologico.dir/Habitat.cpp.obj: CXX_COMPILER__Proyecto_
 #############################################
 # Link the executable Proyecto_Zoologico.exe
 
-build Proyecto_Zoologico.exe: CXX_EXECUTABLE_LINKER__Proyecto_Zoologico_Debug CMakeFiles/Proyecto_Zoologico.dir/main.cpp.obj CMakeFiles/Proyecto_Zoologico.dir/Zoo.cpp.obj CMakeFiles/Proyecto_Zoologico.dir/Habitat.cpp.obj
+build Proyecto_Zoologico.exe: CXX_EXECUTABLE_LINKER__Proyecto_Zoologico_Debug CMakeFiles/Proyecto_Zoologico.dir/main.cpp.obj CMakeFiles/Proyecto_Zoologico.dir/Zoo.cpp.obj CMakeFiles/Proyecto_Zoologico.dir/Habitat.cpp.obj CMakeFiles/Proyecto_Zoologico.dir/Animal.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Proyecto_Zoologico.dir

@@ -1,7 +1,3 @@
-//
-// Created by jeysa nahara on 31/03/2023.
-//
-
 #ifndef PROYECTO_ZOOLOGICO_ZOO_H
 #define PROYECTO_ZOOLOGICO_ZOO_H
 #include <iostream>
@@ -10,19 +6,23 @@
 #include "Habitat.h"
 
 
-using std::vector;
+using namespace std;
 
-//creación de la clase Zoológico.
+/*Creación de la clase contenedora Zoológico.
+ * Habitat: creamos el vector para ir guardando los habitats de los animales.
+ */
+
 class Zoo {
 private:
-    vector<Habitat*> vectorHabitats; //creamos el vector para ir guardando los habitats de los animales.
+    //ATRIBUTOS:
+    vector<Habitat*> vectorHabitats;
 
 public:
-    Zoo() = default;
+    Zoo() = default; //Constructor por defecto.
 
-    vector<Habitat*> getVector();
+    vector<Habitat*> getVector(); //Recibir la información.
 
-    void agregarHabitat(Habitat* habitatAgregar);
+    void agregarHabitat(Habitat* habitatAgregar); // Función para ir agregando un nuevo habitat al vector.
 
 };
 
