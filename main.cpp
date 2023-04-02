@@ -127,6 +127,7 @@ void menuAgregarAnimal(Habitat* habitatAgregar, int id){
     cout << "\nEl animal de nombre " << nuevoAnimal->getNombre() << " fue llevado a su nueva habitat\n" << habitatAgregar->getTipoHabitat() <<endl;
 }
 
+
 // Creamos una función el cual permite ver la información general del zoológico.
 void infoZoologico(vector<Habitat*> habitatsVector){
     vector<Habitat *>::iterator itVector;
@@ -159,16 +160,16 @@ void verAnimal(Habitat* verHabitat){
     map<int, Animal*> mapaAnimal = verHabitat->getAnimales();
     cout << "mapaa= " << mapaAnimal[0] << endl;
 
-    if(mapaAnimal[0] != NULL){
+    if(animale.empty()){
+        cout << "\nEl habitat esta vacio.\n" << endl;
+    }
+    else{
         map<int, Animal*>::iterator itMap;
 
         for (itMap = mapaAnimal.begin(); itMap != mapaAnimal.end(); ++itMap){
-            cout << "El animal " << itMap->second->getEspecieAnimal() << " con id " << itMap->second->getId() << ", se llama " << itMap->second->getNombre();
+            cout << "\nEl animal " << itMap->second->getEspecieAnimal() << " con id " << itMap->second->getId() << ", se llama " << itMap->second->getNombre();
             cout << " con edad " << itMap->second->getEdad() << endl;
         }
-    }
-    else{
-        cout << "\nEl habitat esta vacio.\n" << endl;
     }
 }
 

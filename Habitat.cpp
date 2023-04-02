@@ -33,5 +33,6 @@ void Habitat::setCantAnimales(int cantAnimales){
 }
 
 void Habitat::agregarAnimal(Animal *nuevoAnimal) {
-    this->animales[nuevoAnimal->getId() -1] = nuevoAnimal;
+    this->animales.insert(make_pair(nuevoAnimal->getId(), nuevoAnimal));
 }
+
