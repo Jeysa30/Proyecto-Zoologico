@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug"/>
+				<Option working_dir="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto_Zoologico">
-				<Option output="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Proyecto_Zoologico.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug"/>
+				<Option output="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Proyecto_Zoologico.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -31,17 +31,18 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Zoologico"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Zoologico"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto_Zoologico/fast">
-				<Option output="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Proyecto_Zoologico.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug"/>
+				<Option output="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Proyecto_Zoologico.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,57 +54,58 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Zoologico/fast"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Zoologico/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug"/>
+				<Option working_dir="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug"/>
+				<Option working_dir="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/Animal.cpp">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/Animal.cpp">
 			<Option target="Proyecto_Zoologico"/>
 		</Unit>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/Animal.h">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/Animal.h">
 			<Option target="Proyecto_Zoologico"/>
 		</Unit>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/Habitat.cpp">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/Habitat.cpp">
 			<Option target="Proyecto_Zoologico"/>
 		</Unit>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/Habitat.h">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/Habitat.h">
 			<Option target="Proyecto_Zoologico"/>
 		</Unit>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/Zoo.cpp">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/Zoo.cpp">
 			<Option target="Proyecto_Zoologico"/>
 		</Unit>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/Zoo.h">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/Zoo.h">
 			<Option target="Proyecto_Zoologico"/>
 		</Unit>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/main.cpp">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/main.cpp">
 			<Option target="Proyecto_Zoologico"/>
 		</Unit>
-		<Unit filename="C:/Users/dsala/Desktop/Davis/Programacion/POO/C++/Proyecto-Zoologico/CMakeLists.txt">
+		<Unit filename="C:/Users/jeysa nahara/Documents/3er semestre/Progr. O/GIT/Proyecto-Zoologico/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

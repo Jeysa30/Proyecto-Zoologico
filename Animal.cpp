@@ -1,7 +1,8 @@
 #include "Animal.h"
 
-Animal::Animal(string nombre, int id, int edad, int estadoSalud){
+Animal::Animal(string nombre,string especieAnimal, int id, int edad, int estadoSalud){
     this->nombre = nombre;
+    this->especieAnimal = especieAnimal;
     this->id = id;
     this->edad = edad;
     this->estadoSalud = estadoSalud;
@@ -15,14 +16,6 @@ string Animal::getNombre(){
 void Animal::setNombre(string nombre) {
     this->nombre = nombre;
 }
-
-//string Animal::getTipoAlimento(){
-//    return tipoAlimento;
-//}
-//
-//void Animal::setTipoAlimento(string tipoAlimento) {
-//    this->tipoAlimento = tipoAlimento;
-//}
 
 int Animal::getId(){
     return id;
@@ -70,4 +63,20 @@ bool Animal::getJugar() {
 
 void Animal::setJugar(bool Jugar) {
     this->jugar = Jugar;
+}
+
+vector<string> Animal::getAlimento(){
+    return alimento;
+}
+
+void Animal::setAlimento(vector<string> alimento) {
+    this->alimento = alimento;
+}
+
+string Animal::getEspecieAnimal(){
+    return especieAnimal;
+}
+
+void Animal::setEspecieAnimal(string especieAnimal) {
+    this->especieAnimal = especieAnimal;
 }

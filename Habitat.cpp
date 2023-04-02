@@ -8,7 +8,7 @@ Habitat::Habitat() {
 
 Habitat::Habitat(string tipoHabitat) {
     this->tipoHabitat = tipoHabitat;
-    this->animales[1] = NULL;
+    this->animales[0] = NULL;
     this->cantAnimales = 0;
 }
 
@@ -33,5 +33,5 @@ void Habitat::setCantAnimales(int cantAnimales){
 }
 
 void Habitat::agregarAnimal(Animal *nuevoAnimal) {
-    this->animales[nuevoAnimal->getId()] = nuevoAnimal;
+    this->animales[nuevoAnimal->getId() -1] = nuevoAnimal;
 }

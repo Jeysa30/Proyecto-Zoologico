@@ -1,44 +1,46 @@
 #ifndef PROYECTO_ZOOLOGICO_ANIMAL_H
 #define PROYECTO_ZOOLOGICO_ANIMAL_H
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-/* Clase contenedora Animal:
+/* Clase Animal:
  * nombre: Cada animal tendrá su respectivo nombre.
- * tipoAlimento: Se pondrá la clase de alimento que consume el animal (se le identificará si es carnívoro, herbívoro ó omnívoro).
+ * especieAnimal: Identificar la especie del animal al agregar.
  * id: Cada animal tendrá un número como identificación.
  * edad: Se pondrá o se irá cambiando la edad del animal.
  * cantDormir: Se le agregará la cantidad maxima que puede dormir el animal.
  * cantComer: Se le agregará la cantidad en Kg de comida del animal.
- * jugar: Booleano para saber si el animal ya jugo en el dia.
+ * jugar: Booleano para saber si el animal ya jugo en el día.
+ * vector tipo string de alimento: Se pondrá la clase de alimento que consume el animal (se le identificará si es carnívoro, herbívoro ó omnívoro).
  */
 
 class Animal {
 private:
     //ATRIBUTOS
     string nombre;
-//    Alimentacion* tipoAlimento;
+    string especieAnimal;
     int id;
     int edad;
     int estadoSalud;
-    int tipoAnimal;
     int cantDormir;
     int cantComer;
     bool jugar;
+    vector<string> alimento;
 
 public:
     Animal() = default; //Constructor por defecto.
 
-    Animal(string nombre, int id, int edad, int estadoSalud);
+    Animal(string nombre,string especieAnimal, int id, int edad, int estadoSalud);
 
     //-----Get y Set de nombre:
     string getNombre();
     void setNombre(string nombre);
 
-    //-----Get y Set de tipoAlimento:
-//    Alimentacion* getTipoAlimento();
-//    void setTipoAlimento(Alimentacion* tipoAlimento);
+    //-----Get y Set de especieAnimal:
+    string getEspecieAnimal();
+    void setEspecieAnimal(string especieAnimal);
 
     //-----Get y Set del id:
     int getId();
@@ -63,6 +65,10 @@ public:
     //-----Get y Set del jugar:
     bool getJugar();
     void setJugar(bool Jugar);
+
+    //-----Get y Set del vector tipo alimento
+    vector<string> getAlimento();
+    void setAlimento(vector<string> alimento);
 
 };
 
