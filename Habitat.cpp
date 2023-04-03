@@ -34,7 +34,7 @@ void Habitat::setCantAnimales(int cantAnimales){
 void Habitat::menuAgregarAnimal(int id){
 
     string nombre, especieAnimal;
-    int edad, estadoSalud, cantDormir, tipoDieta;
+    int edad, estadoSalud, cantDormir, tipoDieta, cantComer;
 
     cout << "\nIngrese el nombre del animal: " << endl;
     cin >> nombre;
@@ -48,12 +48,16 @@ void Habitat::menuAgregarAnimal(int id){
     cin >> cantDormir;
 
     do {
-        cout << "1. Carnivoro \n 2. Hervivoro \n 3. omnivoro" << endl;
+        cout << "\nLista de tipo dieta animal:" << endl;
+        cout << "\n1. Carnivoro \n 2. Hervivoro \n 3. omnivoro" << endl;
         cout << "Ingrese el tipo de dieta del animal: " << endl;
         cin >> tipoDieta;
     }while(tipoDieta <= 0 || tipoDieta > 3);
 
-    Animal* nuevoAnimal = new Animal(nombre, especieAnimal, id, edad, estadoSalud, cantDormir);
+    cout << "\nIngrese la cantidad(Kg) que puede comer el animal: " << endl;
+    cin >> cantComer;
+
+    Animal* nuevoAnimal = new Animal(nombre, especieAnimal, id, edad, estadoSalud, cantDormir, cantComer);
     nuevoAnimal->elegirAlimentacion(tipoDieta);
     this->agregarAnimal(nuevoAnimal);
     cout << "\nEl animal de nombre " << nuevoAnimal->getNombre() << " fue llevado a su nueva habitat" << this->getTipoHabitat() <<endl;
@@ -74,8 +78,9 @@ void Habitat::verAnimal(){
 
         for (int itM = 0; itM < this->cantAnimales; ++itMap, itM++){
             cout << "\nEl animal " << itMap->second->getEspecieAnimal() << " con id " << itMap->second->getId() << ", se llama " << itMap->second->getNombre();
-            cout << " con edad " << itMap->second->getEdad() << endl;
+            cout << ", con edad " << itMap->second->getEdad() << ", es un animal tipo " << itMap->second->getDieta() << endl;
         }
     }
 }
+
 
