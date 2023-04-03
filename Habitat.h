@@ -39,6 +39,12 @@ public:
     //Metodo para agregar animales al mapa
     void agregarAnimal(Animal* nuevoAnimal);
 
+    //Metodo para pedir la informacion del animal.
+    void menuAgregarAnimal(int id);
+
+    // Creamos la función para ver la lista de los animales que hay en cada habitad.
+    void verAnimal();
+
 };
 
 

@@ -1,13 +1,14 @@
 #include "Animal.h"
 
-Animal::Animal(string nombre,string especieAnimal, int id, int edad, int estadoSalud){
+Animal::Animal(string nombre,string especieAnimal, int id, int edad, int estadoSalud, int cantDormir){
     this->nombre = nombre;
     this->especieAnimal = especieAnimal;
     this->id = id;
     this->edad = edad;
     this->estadoSalud = estadoSalud;
+    this->cantDormir = cantDormir;
+    this->jugar = False;
 }
-
 
 string Animal::getNombre(){
     return nombre;
@@ -79,4 +80,24 @@ string Animal::getEspecieAnimal(){
 
 void Animal::setEspecieAnimal(string especieAnimal) {
     this->especieAnimal = especieAnimal;
+}
+
+void Animal::elegirAlimentacion(int tipoDieta){
+    vector<string> dietaAnimal;
+    if(tipoDieta == 1){
+        dietaAnimal[0] = "Carne";
+        dietaAnimal[1] = "Pescado";
+        dietaAnimal[2] = "Presas";
+    }
+    else if(tipoDieta == 2){
+        dietaAnimal[0] = "Hierva";
+        dietaAnimal[1] = "Frutas";
+        dietaAnimal[2] = "Vegetales";
+    }
+    else{
+        dietaAnimal[0] = "Carne";
+        dietaAnimal[1] = "Pescado";
+        dietaAnimal[2] = "Futas";
+    }
+    this->setAlimento(dietaAnimal);
 }

@@ -24,6 +24,12 @@ public:
 
     void agregarHabitat(Habitat* habitatAgregar); // Función para ir agregando un nuevo habitat al vector.
 
+    // Funcion para ingresar los datos del habitat.
+    void menuAgregarHabitat();
+
+    // Creamos una función el cual permite ver la información general del zoológico. Retorna la dirrecion de memoria del habitat que quiere ver el usuario.
+    Habitat* infoZoologico();
+
 };
 
 

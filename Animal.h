@@ -25,14 +25,13 @@ private:
     int edad;
     int estadoSalud;
     int cantDormir;
-    int cantComer;
     bool jugar;
     vector<string> alimento;
 
 public:
     Animal() = default; //Constructor por defecto.
 
-    Animal(string nombre,string especieAnimal, int id, int edad, int estadoSalud);
+    Animal(string nombre,string especieAnimal, int id, int edad, int estadoSalud, int cantDormir);
 
     //-----Get y Set de nombre:
     string getNombre();
@@ -70,6 +69,8 @@ public:
     vector<string> getAlimento();
     void setAlimento(vector<string> alimento);
 
+    //Metodo para agregar el tipo de alimentacion que tendra el animal.
+    void elegirAlimentacion(int tipoDieta);
 };
 
 

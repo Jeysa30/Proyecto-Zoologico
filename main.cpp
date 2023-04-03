@@ -5,11 +5,7 @@
 using namespace std;
 
 // Parametros de cada función creada
-void menuAgregarHabitat(Zoo* zoologico);
 void menuZoo(Zoo* zoologico);
-void menuAgregarAnimal(Habitat* habitatAgregar, int id);
-void infoZoologico(vector<Habitat*> habitatsVector);
-void verAnimal(Habitat* verHabitat);
 
 void menuZoo(Zoo* zoologico){
     int op, idAnimal = 1;
@@ -28,14 +24,13 @@ void menuZoo(Zoo* zoologico){
         switch(op){
             case 1:
                 // Se hace el llamado a la función paa agregar un habitat.
-                menuAgregarHabitat(zoologico);
+                zoologico->menuAgregarHabitat();
                 break;
             case 2:
                 // Para esta opción evitamos que agregue un animal si por lo menos no hay un habitat creado.
                 if(habitatsVector.empty()){ // (Manejo de error).
                     cout << "No puede agregar animales aun, no hay ningun habitat en la que puedan vivir" << endl;
                 }
-
                 // Si ya existe por lo menos un habitat se activa esta opción para agregar un animal.
                 else{
                     // aquí lo que se hace es mostrar en forma de lista a los habitats disponibles.
@@ -56,8 +51,7 @@ void menuZoo(Zoo* zoologico){
                         cout << "\nIngreso un numero que no se encuentra en la lista, vuelva a intentarlo: ";
                         cin >> posicionHabitat;
                     }
-
-                    menuAgregarAnimal(zoologico->getVector()[posicionHabitat - 1], idAnimal);
+                    habitatsVector[posicionHabitat - 1]->menuAgregarAnimal(idAnimal);
                     // Como el vector esta desde el 1(de manera que empieza en 2), por esto le restamos a la posición -1.
                     idAnimal++;
                 }
@@ -84,7 +78,7 @@ void menuZoo(Zoo* zoologico){
                 }
                 else{
                     // Se hace el llamado a la función cuando ya tiene por lo menos 1 habitat creado.
-                    infoZoologico(habitatsVector);
+                    zoologico->infoZoologico()->verAnimal();
                 }
                 break;
             default:
@@ -93,88 +87,6 @@ void menuZoo(Zoo* zoologico){
 
     }while(op != 0);
 }
-
-// Creamos la función para crear un habitat.
-void menuAgregarHabitat(Zoo* zoologico){
-    string tipoHabitat;
-
-    cout << "Ingrese el tipo de habitat que va a crear: ";
-    cin.ignore();
-    getline(cin, tipoHabitat, '\n');
-
-    Habitat* habitat = new Habitat(tipoHabitat);
-    zoologico->agregarHabitat(habitat);
-    cout << "---!Nueva habitat aniadida al zoologico!---" << endl;
-}
-
-// Creamos la función para agregar un animal a un habitat existente.
-void menuAgregarAnimal(Habitat* habitatAgregar, int id){
-
-    string nombre, especieAnimal;
-    int edad, estadoSalud;
-
-    cout << "\nIngrese la especie del animal que va a agregar: " << endl;
-    cin >> especieAnimal;
-    cout << "\nIngrese el nombre del animal que va a agregar: " << endl;
-    cin >> nombre;
-    cout << "\nIngrese la edad del animal: " << endl;
-    cin >> edad;
-    cout << "\nIngrese el estado de salud actual del animal(del 1 al 10): " << endl;
-    cin >> estadoSalud;
-
-    Animal* nuevoAnimal = new Animal(nombre, especieAnimal, id, edad, estadoSalud);
-    habitatAgregar->agregarAnimal(nuevoAnimal);
-    cout << "\nEl animal de nombre " << nuevoAnimal->getNombre() << " fue llevado a su nueva habitat\n" << habitatAgregar->getTipoHabitat() <<endl;
-}
-
-
-// Creamos una función el cual permite ver la información general del zoológico.
-void infoZoologico(vector<Habitat*> habitatsVector){
-    vector<Habitat *>::iterator itVector;
-    int posicionHabitat;
-    int contadorLista = 1;
-
-    cout << "\n--INFORMACION DEL ZOOLOGICO--\n" << endl;
-    // aquí lo que se hace es mostrar en forma de lista a los habitats que han sido creados.
-    for (itVector = habitatsVector.begin(); itVector != habitatsVector.end(); ++itVector) {
-        cout << contadorLista << ". " << (*itVector)->getTipoHabitat() << endl;
-        ++contadorLista;
-    }
-
-    cout << "\nVisita el habitat que deseas mirar la informacion: ";
-    cin >> posicionHabitat;
-
-    // Se hace el manejo de errores, si entra un número que no se muestra en la lista.
-    while((posicionHabitat < 0) || (posicionHabitat >= contadorLista)){
-        cout << "\nIngreso un numero que no se encuentra en la lista, vuelva a intentarlo: ";
-        cin >> posicionHabitat;
-    }
-
-    verAnimal(habitatsVector[posicionHabitat - 1]);
-    // Como el vector esta desde el 1(de manera que empieza en 2), por esto le restamos a la posición -1.
-
-}
-
-// Creamos la función para ver la lista de los animales que hay en cada habitad.
-void verAnimal(Habitat* verHabitat){
-    map<int, Animal*> mapaAnimal = verHabitat->getAnimales();
-    cout << "mapaa= " << mapaAnimal[0] << endl;
-
-    if(animale.empty()){
-        cout << "\nEl habitat esta vacio.\n" << endl;
-    }
-    else{
-        map<int, Animal*>::iterator itMap;
-
-        for (itMap = mapaAnimal.begin(); itMap != mapaAnimal.end(); ++itMap){
-            cout << "\nEl animal " << itMap->second->getEspecieAnimal() << " con id " << itMap->second->getId() << ", se llama " << itMap->second->getNombre();
-            cout << " con edad " << itMap->second->getEdad() << endl;
-        }
-    }
-}
-
-
-
 
 int main() {
     Zoo zoologicoMaravilla;
