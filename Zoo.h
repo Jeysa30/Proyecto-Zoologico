@@ -1,10 +1,6 @@
 #ifndef PROYECTO_ZOOLOGICO_ZOO_H
 #define PROYECTO_ZOOLOGICO_ZOO_H
-#include <iostream>
-#include <vector>
-
 #include "Habitat.h"
-
 
 using namespace std;
 
@@ -34,6 +30,5 @@ public:
     Animal* buscarAnimalZoologico();
 
 };
-
 
 #endif //PROYECTO_ZOOLOGICO_ZOO_H

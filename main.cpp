@@ -1,11 +1,37 @@
-#include <iostream>
-
 #include "Zoo.h"
 
 using namespace std;
 
-// Parametros de cada función creada
+// Prototipos de cada función creada en el main
 void menuZoo(Zoo* zoologico);
+
+int main() {
+    Zoo zoologicoMaravilla;
+
+    ////Manejo de la exepcion del menu, para que no se pueda ingresar string en las varibles de enteros.
+    bool terminado = false;
+    int x = 0;
+    do {
+        try {
+            menuZoo(&zoologicoMaravilla);
+            terminado = true;
+        }
+        catch (const invalid_argument error) {
+            cout << "\nSE PRESENTO UN ERROR: " << error.what() << endl;
+            //limpieza del buffer, estas funciones con estos parametros logran que al momento de manejar el error
+            //en el que se ingresa un string no se haga ningun bucle.
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+            terminado = false;
+        }
+    }
+    while(terminado == false);
+
+
+    cout << "\n----!Has salido del Zoologico!----" << endl;
+
+    return 0;
+}
 
 void menuZoo(Zoo* zoologico){
     int op, idAnimal = 1;
@@ -20,6 +46,10 @@ void menuZoo(Zoo* zoologico){
         cout << "0. Salir del zoologico.\n" << endl;
         cout << "Ingrese la opcion: ";
         cin >> op;
+        //Entra en la condicion de manejo de errores cuando la entrada por consola es incorrecta.
+        if(!cin.good()){
+            throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
+        }
 
         switch(op){
             case 1:
@@ -33,9 +63,24 @@ void menuZoo(Zoo* zoologico){
                 }
                 // Si ya existe por lo menos un habitat se activa esta opción para agregar un animal.
                 else{
-                    //Se llama la funcion infoZoologico porque hace lo mismo que hacia el codigo que teniamos anteriormente
-                    zoologico->infoZoologico()->menuAgregarAnimal(idAnimal);
-                    idAnimal++;
+                    bool terminado = false;
+                    int x = 0;
+                    do {
+                        //Manejo de entradas.
+                        try {
+                            //Se llama la funcion infoZoologico porque hace lo mismo que hacia el codigo que teniamos anteriormente
+                            zoologico->infoZoologico()->menuAgregarAnimal(idAnimal);
+                            idAnimal++;
+                            terminado = true;
+                        }
+                        catch (const invalid_argument error) {
+                            cout << "\nSE PRESENTO UN ERROR: " << error.what() << endl;
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+                            terminado = false;
+                        }
+                    }
+                    while(terminado == false);
                 }
                 break;
             case 3:
@@ -43,10 +88,25 @@ void menuZoo(Zoo* zoologico){
                     cout << "No puede modificar los alimentos de los animales porque no hay ningun habitat hasta el momento" << endl;
                 }
                 else{
-                    Animal* animalEncontrado = zoologico->buscarAnimalZoologico();
-                    if(animalEncontrado != NULL){
-                        animalEncontrado->modificarAlimentacion();
+                    bool terminado = false;
+                    int x = 0;
+                    do {
+                        //Manejo de entradas.
+                        try {
+                            Animal* animalEncontrado = zoologico->buscarAnimalZoologico();
+                            if(animalEncontrado != NULL){
+                                animalEncontrado->modificarAlimentacion();
+                            }
+                            terminado = true;
+                        }
+                        catch (const invalid_argument error) {
+                            cout << "\nSE PRESENTO UN ERROR: " << error.what() << endl;
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+                            terminado = false;
+                        }
                     }
+                    while(terminado == false);
                 }
                 break;
             case 4:
@@ -54,10 +114,25 @@ void menuZoo(Zoo* zoologico){
                     cout << "No puede ejecutar las acciones de los animales porque no hay ningun habitat hasta el momento" << endl;
                 }
                 else{
-                    Animal* animalEncontrado = zoologico->buscarAnimalZoologico();
-                    if(animalEncontrado != NULL){
-                        animalEncontrado->accionAnimal();
+                    bool terminado = false;
+                    int x = 0;
+                    do {
+                        //Manejo de entradas.
+                        try {
+                            Animal* animalEncontrado = zoologico->buscarAnimalZoologico();
+                            if(animalEncontrado != NULL){
+                                animalEncontrado->accionAnimal();
+                            }
+                            terminado = true;
+                        }
+                        catch (const invalid_argument error) {
+                            cout << "\nSE PRESENTO UN ERROR: " << error.what() << endl;
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+                            terminado = false;
+                        }
                     }
+                    while(terminado == false);
                 }
                 break;
             case 5:
@@ -65,8 +140,23 @@ void menuZoo(Zoo* zoologico){
                     cout << "No hay ningun habitat ni animal en el zoologico" << endl;
                 }
                 else{
-                    // Se hace el llamado a la función cuando ya tiene por lo menos 1 habitat creado.
-                    zoologico->infoZoologico()->verAnimal();
+                    bool terminado = false;
+                    int x = 0;
+                    do {
+                        //Manejo de entradas.
+                        try {
+                            // Se hace el llamado a la función cuando ya tiene por lo menos 1 habitat creado.
+                            zoologico->infoZoologico()->verAnimal();
+                            terminado = true;
+                        }
+                        catch (const invalid_argument error) {
+                            cout << "\nSE PRESENTO UN ERROR: " << error.what() << endl;
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+                            terminado = false;
+                        }
+                    }
+                    while(terminado == false);
                 }
                 break;
             default:
@@ -74,14 +164,4 @@ void menuZoo(Zoo* zoologico){
         }
 
     }while(op != 0);
-}
-
-int main() {
-    Zoo zoologicoMaravilla;
-
-    menuZoo(&zoologicoMaravilla);
-
-    cout << "\n----!Has salido del Zoologico!----" << endl;
-
-    return 0;
 }

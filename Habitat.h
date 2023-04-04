@@ -1,8 +1,6 @@
 #ifndef PROYECTO_ZOOLOGICO_HABITAT_H
 #define PROYECTO_ZOOLOGICO_HABITAT_H
-#include <iostream>
 #include <map>
-
 #include "Animal.h"
 
 using namespace std;
@@ -47,6 +45,5 @@ public:
 
 
 };
-
 
 #endif //PROYECTO_ZOOLOGICO_HABITAT_H

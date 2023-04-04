@@ -2,6 +2,7 @@
 #define PROYECTO_ZOOLOGICO_ANIMAL_H
 #include <iostream>
 #include <vector>
+#include <limits>
 
 using namespace std;
 
@@ -11,8 +12,10 @@ using namespace std;
  * dieta: Se escoge que tipo de dieta es el animal (carnivoro, herviboro ó omnivoro).
  * id: Cada animal tendrá un número como identificación.
  * edad: Se pondrá o se irá cambiando la edad del animal.
- * cantDormir: Se le agregará la cantidad maxima que puede dormir el animal.
- * cantComer: Se le agregará la cantidad en Kg de comida del animal.
+ * cantDormir: Se le agregará la cantidad maxima que puede dormir el animal en un solo dia.
+ * cantComer: Se le agregará la cantidad en Kg de comida que puede comer el animal en un solo dia.
+ * cantDormirTemporal: Es la cantidad de horas que le quedan al animal por dormir en el dia.
+ * cantComerTemporal: Es la cantidad de kilogramos de comida que le quedan al animal por comer en el dia.
  * jugar: Booleano para saber si el animal ya jugo en el día.
  * vector tipo string de alimento: Se pondrá la clase de alimento que consume el animal.
  */
@@ -89,16 +92,26 @@ public:
     //Metodo para agregar el tipo de alimentacion que tendra el animal.
     void elegirAlimentacion(int tipoDieta);
 
-    // Función que permite al usuario que elija que accion debe realizar para el animal.
+    // Metodo que permite al usuario que elija que accion debe realizar para el animal.
     void accionAnimal();
 
+    // Metodo que ejecuta la accion de dormir del animal.
     void dormirAccion(int* cantAccion);
+
+    // Metodo que ejecuta la accion de comer del animal.
     void comerAccion(int* cantAccion);
+
+    // Metodo que ejecuta la accion de jugar del animal.
     void jugarAccion(int* cantAccion);
+
+    // Metodo que modifica los alimentos que puede comer el animal.
     void modificarAlimentacion();
+
+    //Metodo que elimina un alimento de la lista de posibles alimentos del animal.
     void eliminarAlimento();
+
+    //Metodo que agrega un alimento a la lista de posibles alimentos del animal.
     void agregarComida();
 };
-
 
 #endif //PROYECTO_ZOOLOGICO_ANIMAL_H

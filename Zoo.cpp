@@ -37,22 +37,28 @@ Habitat* Zoo::infoZoologico(){
 
     cout << "\nIngrese el numero del habitat: ";
     cin >> posicionHabitat;
-
+    if(!cin.good()){
+        throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero, vuelva a ingresar el numero");
+    }
     // Se hace el manejo de errores, si entra un número que no se muestra en la lista.
     while((posicionHabitat < 0) || (posicionHabitat >= contadorLista)){
         cout << "\nIngreso un numero que no se encuentra en la lista, vuelva a intentarlo: ";
         cin >> posicionHabitat;
     }
+
     return this->vectorHabitats[posicionHabitat - 1];
     // Como el vector esta desde el 1(de manera que empieza en 2), por esto le restamos a la posición -1.
 }
 
-// Creamos esta funcion para hacer la busquedad del animal que el usuario quiere que haga la accion.
+// Creamos esta funcion para hacer la busquedad del animal que el usuario quiere que haga la accion,
+// retorna un puntero a un objeto de tipo Animal.
 Animal* Zoo::buscarAnimalZoologico(){
     int idAnimal;
     cout << "\nIngrese la id del animal: ";
     cin >> idAnimal;
-
+    if(!cin.good()){
+        throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero, vuelva a ingresar el numero");
+    }
     vector<Habitat *>::iterator itVector;
     for (itVector = this->vectorHabitats.begin(); itVector != this->vectorHabitats.end(); ++itVector){
         map<int, Animal*>::iterator itMap = (*itVector)->getAnimales().begin();
