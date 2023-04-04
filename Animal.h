@@ -95,6 +95,9 @@ public:
     void dormirAccion(int* cantAccion);
     void comerAccion(int* cantAccion);
     void jugarAccion(int* cantAccion);
+    void modificarAlimentacion();
+    void eliminarAlimento();
+    void agregarComida();
 };
 
 

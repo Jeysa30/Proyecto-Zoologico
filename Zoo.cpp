@@ -50,7 +50,7 @@ Habitat* Zoo::infoZoologico(){
 // Creamos esta funcion para hacer la busquedad del animal que el usuario quiere que haga la accion.
 Animal* Zoo::buscarAnimalZoologico(){
     int idAnimal;
-    cout << "Ingrese la id del animal: ";
+    cout << "\nIngrese la id del animal: ";
     cin >> idAnimal;
 
     vector<Habitat *>::iterator itVector;
@@ -62,6 +62,6 @@ Animal* Zoo::buscarAnimalZoologico(){
             }
         }
     }
-    cout << "El animal con id " << idAnimal << " no se encuentra en el zoolgico" << endl;
+    cout << "\nEl animal con id " << idAnimal << " no se encuentra en el zoolgico" << endl;
     return NULL;
 }

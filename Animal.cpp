@@ -139,7 +139,7 @@ void Animal::accionAnimal(){
     string accion;
 
     while(cantAccion != -777) {
-        cout << "Ingresa el nombre de la accion que quieres que realice " << this->nombre << ": ";
+        cout << "\nIngresa el nombre de la accion que quieres que realice " << this->nombre << " (Comer, dormir o jugar): ";
         cin >> accion;
         for (int i = 0; i < accion.length(); i++) {
             accion[i] = tolower(accion[i]);
@@ -154,70 +154,150 @@ void Animal::accionAnimal(){
             this->jugarAccion(&cantAccion);
         }
         else {
-            cout << "Solo puedes pedirle al animal realizar 3 tipos de acciones (Comer, dormir, jugar)." << endl;
+            cout << "\nSolo puedes pedirle al animal realizar 3 tipos de acciones (Comer, dormir o jugar).\n" << endl;
         }
     }
 }
 
 void Animal::dormirAccion(int* cantAccion){
-    cout << "Ingrese la cantidad de horas que va a dormir " << this->nombre << ": ";
+    cout << "\nIngrese la cantidad de horas que va a dormir " << this->nombre << ": ";
     cin >> *cantAccion;
     if (this->cantDormirTemporal - *cantAccion >= 0) {
         this->cantDormirTemporal -= *cantAccion;
-        cout << "El animal con id " << this->id << " y nombre " << this->nombre << " durmio " << *cantAccion
+        cout << "\nEl animal con id " << this->id << " y nombre " << this->nombre << " durmio " << *cantAccion
              << " horas de las " << this->cantDormir << " disponibles, le quedan " << this->cantDormirTemporal
-             << " horas para dormir en el dia" << endl;
+             << " horas para dormir en el dia\n" << endl;
         *cantAccion = -777;
     }
     else {
-        cout << "El animal con id " << this->id << " y nombre " << this->nombre << " no puede dormir "
+        cout << "\nEl animal con id " << this->id << " y nombre " << this->nombre << " no puede dormir "
              << *cantAccion << " horas en este momento, solo le quedan " << this->cantDormirTemporal
-             << " horas para dormir hoy" << endl;
+             << " horas para dormir hoy\n" << endl;
     }
 }
 
 void Animal::comerAccion(int* cantAccion){
     string alimentarAnimal;
     cout << "\nTenga en cuenta que " << this->nombre << " es " << this->dieta << endl;
-    cout << "Ingrese el alimento que se le va a dar a " << this->nombre << ": ";
+    cout << "\nIngrese el alimento que se le va a dar a " << this->nombre << ": ";
     cin >> alimentarAnimal;
+
     for (int i = 0; i < alimentarAnimal.length(); i++) {
         alimentarAnimal[i] = tolower(alimentarAnimal[i]);
     }
+
     for(int i = 0; i < this->alimento.size(); i++){
         if(alimentarAnimal.compare(this->alimento[i]) == 0){
-            cout << "Ingrese la cantidad de alimento que le va a dar a " << this->nombre << ": ";
+            cout << "\nIngrese la cantidad de alimento que le va a dar a " << this->nombre << ": ";
             cin >> *cantAccion;
+
             if (this->cantComerTemporal - *cantAccion >= 0) {
                 this->cantComerTemporal -= *cantAccion;
-                cout << "El animal con id " << this->id << " y nombre " << this->nombre << " comio " << *cantAccion
+                cout << "\nEl animal con id " << this->id << " y nombre " << this->nombre << " comio " << *cantAccion
                      << " kilogramos de " << alimentarAnimal << ", le quedan por comer " << this->cantComerTemporal
-                     << " kilogramos en el dia" << endl;
+                     << " kilogramos en el dia\n" << endl;
                 *cantAccion = -777;
             }
             else {
-                cout << "El animal con id " << this->id << " y nombre " << this->nombre << " no puede comer "
+                cout << "\nEl animal con id " << this->id << " y nombre " << this->nombre << " no puede comer "
                      << *cantAccion << " kilogramos en este momento, solo le quedan " << this->cantComerTemporal
-                     << " kilogramos para comer hoy" << endl;
+                     << " kilogramos para comer hoy\n" << endl;
             }
             break;
         }
         if(i + 1 == this->alimento.size()){
-            cout << alimentarAnimal
+            cout <<"\n"<< alimentarAnimal
             << " no se encuentra dentro de la posible dieta de " << this->nombre
-            << ", si crees que deberia estar en la dieta agregalo en la opcion 3 del menu." << endl;
+            << ", si crees que deberia estar en la dieta agregalo en la opcion 3 del menu.\n" << endl;
         }
     }
 }
 
 void Animal::jugarAccion(int* cantAccion){
     if(this->jugar == false){
-        cout << "\nEl animal con id " << this->id << " y nombre " << this->nombre << " acaba de jugar." << endl;
+        cout << "\nEl animal con id " << this->id << " y nombre " << this->nombre << " acaba de jugar.\n" << endl;
         this->jugar = true;
         *cantAccion = -777;
     }
     else{
-        cout << "\nEl animal con id " << this->id << " y nombre " << this->nombre << " ya jugo una vez en el dia, no puede volver a hacerlo." << endl;
+        cout << "\nEl animal con id " << this->id << " y nombre ";
+        cout << this->nombre << " ya jugo una vez en el dia, no puede volver a hacerlo.\n" << endl;
     }
 }
 
+void Animal::modificarAlimentacion(){
+    int op;
+
+    cout << "\n1. Eliminar alguna comida." << endl;
+    cout << "\n2. agregar una nueva comida." << endl;
+    cout << "\nQue modificaciones quieres realizarle a la alimentacion del animal " << this->nombre << ":" << endl;
+    cin >> op;
+
+    if(op == 1){
+        eliminarAlimento();
+    }
+
+    else if(op == 2){
+        agregarComida();
+    }
+
+    else{
+        cout << "\nIngreso un numero que no se encuentra en la lista, vuelva a intentarlo: ";
+        cin >> op;
+    }
+
+}
+
+void Animal::eliminarAlimento(){
+    vector<string>::iterator itComida;
+    int eliminar;
+    int contador = 1;
+    int contadorFinal = 1;
+
+    cout << "\nEsta es la lista de los alimentos:\n" << endl;
+    for (itComida = this->alimento.begin(); itComida != this->alimento.end(); ++itComida) {
+        cout << contador << ". " << (*itComida) << endl;
+        ++contador;
+    }
+
+    cout << "\nDigita el alimento a eliminar: ";
+    cin >> eliminar;
+
+    while((eliminar < 0) || (eliminar >= contador)){
+        cout << "\nIngreso un numero que no se encuentra en la lista, vuelva a intentarlo: ";
+        cin >> eliminar;
+    }
+
+    alimento.erase(alimento.begin() + (eliminar-1));
+    cout << "\nEl alimento se elimino correctamente." << endl;
+
+    cout << "\nLa lista de los alimentos quedo asi:\n" << endl;
+    for (itComida = this->alimento.begin(); itComida != this->alimento.end(); ++itComida) {
+        cout << contadorFinal << ". " << (*itComida) << endl;
+        ++contadorFinal;
+    }
+}
+
+void Animal::agregarComida(){
+    vector<string>::iterator itComida;
+    string agregar;
+    int contador = 1;
+    int contadorFinal = 1;
+
+    cout << "\nEsta es la lista de los alimentos:\n" << endl;
+    for (itComida = this->alimento.begin(); itComida != this->alimento.end(); ++itComida) {
+        cout << contador << ". " << (*itComida) << endl;
+        ++contador;
+    }
+
+    cout << "\nEscribe el alimento a agregar: ";
+    cin >> agregar;
+    alimento.push_back(agregar);
+    cout << "\nEl alimento se agrego correctamente." << endl;
+
+    cout << "\nLa lista de los alimentos quedo asi:\n" << endl;
+    for (itComida = this->alimento.begin(); itComida != this->alimento.end(); ++itComida) {
+        cout << contadorFinal << ". " << (*itComida) << endl;
+        ++contadorFinal;
+    }
+}

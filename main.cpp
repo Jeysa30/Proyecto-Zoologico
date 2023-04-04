@@ -14,7 +14,7 @@ void menuZoo(Zoo* zoologico){
         cout << "\n------EL ZOOLOGICO MARAVILLA------\n" << endl;
         cout << "1. Agrega un habitat." << endl;
         cout << "2. Agregar animal." << endl;
-        cout << "3. Entra a un habitat (editar informacion)." << endl;
+        cout << "3. Modificar alimentacion de un animal." << endl;
         cout << "4. Acciones animales." << endl;
         cout << "5. Ver informacion del zoologico." << endl;
         cout << "0. Salir del zoologico.\n" << endl;
@@ -40,10 +40,13 @@ void menuZoo(Zoo* zoologico){
                 break;
             case 3:
                 if(habitatsVector.empty()){
-                    cout << "No puede entrar en un habitat, no hay ninguna creada hasta el momento" << endl;
+                    cout << "No puede modificar los alimentos de los animales porque no hay ningun habitat hasta el momento" << endl;
                 }
                 else{
-
+                    Animal* animalEncontrado = zoologico->buscarAnimalZoologico();
+                    if(animalEncontrado != NULL){
+                        animalEncontrado->modificarAlimentacion();
+                    }
                 }
                 break;
             case 4:
