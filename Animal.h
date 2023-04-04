@@ -28,6 +28,8 @@ private:
     int estadoSalud;
     int cantDormir;
     int cantComer;
+    int cantDormirTemporal;
+    int cantComerTemporal;
     bool jugar;
     vector<string> alimento;
 
@@ -68,6 +70,14 @@ public:
     int getCantComer();
     void setCantComer(int cantComer);
 
+    //-----Get y Set de cantDormirTemporal:
+    int getCantDormirTemporal();
+    void setCantDormirTemporal(int cantDormirTemporal);
+
+    //-----Get y Set de cantComerTemporal:
+    int getCantComerTemporal();
+    void setCantComerTemporal(int cantComerTemporal);
+
     //-----Get y Set del jugar:
     bool getJugar();
     void setJugar(bool Jugar);
@@ -80,7 +90,11 @@ public:
     void elegirAlimentacion(int tipoDieta);
 
     // Función que permite al usuario que elija que accion debe realizar para el animal.
-    void accionAnimal(int id, string accion, int cantAccion);
+    void accionAnimal();
+
+    void dormirAccion(int* cantAccion);
+    void comerAccion(int* cantAccion);
+    void jugarAccion(int* cantAccion);
 };
 
 

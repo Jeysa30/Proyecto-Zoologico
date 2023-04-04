@@ -46,21 +46,20 @@ void Habitat::menuAgregarAnimal(int id){
     cin >> estadoSalud;
     cout << "\nIngrese la cantidad de horas que puede dormir maximo: " << endl;
     cin >> cantDormir;
+    cout << "\nIngrese la cantidad(Kg) que puede comer el animal: " << endl;
+    cin >> cantComer;
 
     do {
         cout << "\nLista de tipo dieta animal:" << endl;
-        cout << "\n1. Carnivoro \n 2. Hervivoro \n 3. omnivoro" << endl;
+        cout << "\n 1. Carnivoro \n 2. Hervivoro \n 3. omnivoro" << endl;
         cout << "Ingrese el tipo de dieta del animal: " << endl;
         cin >> tipoDieta;
     }while(tipoDieta <= 0 || tipoDieta > 3);
 
-    cout << "\nIngrese la cantidad(Kg) que puede comer el animal: " << endl;
-    cin >> cantComer;
-
     Animal* nuevoAnimal = new Animal(nombre, especieAnimal, id, edad, estadoSalud, cantDormir, cantComer);
     nuevoAnimal->elegirAlimentacion(tipoDieta);
     this->agregarAnimal(nuevoAnimal);
-    cout << "\nEl animal de nombre " << nuevoAnimal->getNombre() << " fue llevado a su nueva habitat" << this->getTipoHabitat() <<endl;
+    cout << "\nEl animal de nombre " << nuevoAnimal->getNombre() << " fue llevado a su nueva habitat " << this->getTipoHabitat() <<endl;
 }
 
 void Habitat::agregarAnimal(Animal *nuevoAnimal) {

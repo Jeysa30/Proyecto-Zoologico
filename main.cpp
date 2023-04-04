@@ -33,32 +33,14 @@ void menuZoo(Zoo* zoologico){
                 }
                 // Si ya existe por lo menos un habitat se activa esta opción para agregar un animal.
                 else{
-                    // aquí lo que se hace es mostrar en forma de lista a los habitats disponibles.
-                    vector<Habitat*>::iterator itVector;
-                    int posicionHabitat;
-                    int contadorLista = 1; // Variable para enumerar cada habitat.
-                    cout << "\nLos habitats disponibles para el animal son:\n";
-                    for (itVector = habitatsVector.begin(); itVector != habitatsVector.end(); ++itVector){
-                        cout << contadorLista << ". " << (*itVector)->getTipoHabitat() << endl;
-                        ++contadorLista;
-                    }
-                    // De esta forma, al momento de elegir el habitat aparecería la función para agregar un animal.
-                    cout << "Seleccione el numero del habitat donde va a vivir el animal: ";
-                    cin >> posicionHabitat;
-
-                    // Se hace el manejo de errores, si entra un número que no se muestra en la lista.
-                    while((posicionHabitat < 0) || (posicionHabitat >= contadorLista)){
-                        cout << "\nIngreso un numero que no se encuentra en la lista, vuelva a intentarlo: ";
-                        cin >> posicionHabitat;
-                    }
-                    habitatsVector[posicionHabitat - 1]->menuAgregarAnimal(idAnimal);
-                    // Como el vector esta desde el 1(de manera que empieza en 2), por esto le restamos a la posición -1.
+                    //Se llama la funcion infoZoologico porque hace lo mismo que hacia el codigo que teniamos anteriormente
+                    zoologico->infoZoologico()->menuAgregarAnimal(idAnimal);
                     idAnimal++;
                 }
                 break;
             case 3:
                 if(habitatsVector.empty()){
-                    cout << "No puede agregar animales aun, no hay ningun habitat en la que puedan vivir" << endl;
+                    cout << "No puede entrar en un habitat, no hay ninguna creada hasta el momento" << endl;
                 }
                 else{
 
@@ -66,10 +48,13 @@ void menuZoo(Zoo* zoologico){
                 break;
             case 4:
                 if(habitatsVector.empty()){
-                    cout << "No puede agregar animales aun, no hay ningun habitat en la que puedan vivir" << endl;
+                    cout << "No puede ejecutar las acciones de los animales porque no hay ningun habitat hasta el momento" << endl;
                 }
                 else{
-
+                    Animal* animalEncontrado = zoologico->buscarAnimalZoologico();
+                    if(animalEncontrado != NULL){
+                        animalEncontrado->accionAnimal();
+                    }
                 }
                 break;
             case 5:

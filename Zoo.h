@@ -30,6 +30,9 @@ public:
     // Creamos una función el cual permite ver la información general del zoológico. Retorna la dirrecion de memoria del habitat que quiere ver el usuario.
     Habitat* infoZoologico();
 
+    //Metodo para buscar el animal que va a realizar la accion ingresada por el usuario
+    Animal* buscarAnimalZoologico();
+
 };
 
 
