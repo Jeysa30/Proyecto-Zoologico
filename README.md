@@ -70,3 +70,16 @@ Estas clases interactúan entre sí para cumplir con las 5 acciones que tiene nu
   verAnimal, en este método se verifica si el Habitat esta vacio, de lo contrario se imprime la información de todos los animales existentes en
   este habitat.
 
+# Evidencia del funcionamiento del programa
+
+<figure>
+    <img src="C:\Users\jeysa nahara\Pictures\Evidencia1.png"
+         alt="Evidencia de creación del habitat">
+    <figcaption>Creación del habitat polar.</figcaption>
+</figure>
+
+<figure>
+    <img src="C:\Users\jeysa nahara\Pictures\Evidencia2.png"
+         alt="Evidencia de creación del animal en un habitat seleccionado">
+    <figcaption>Creación del animal y agregarlo al habitat polar.</figcaption>
+</figure>

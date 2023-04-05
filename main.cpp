@@ -10,7 +10,6 @@ int main() {
 
     ////Manejo de la exepcion del menu, para que no se pueda ingresar string en las varibles de enteros.
     bool terminado = false;
-    int x = 0;
     do {
         try {
             menuZoo(&zoologicoMaravilla);
@@ -64,7 +63,6 @@ void menuZoo(Zoo* zoologico){
                 // Si ya existe por lo menos un habitat se activa esta opción para agregar un animal.
                 else{
                     bool terminado = false;
-                    int x = 0;
                     do {
                         //Manejo de entradas.
                         try {
@@ -89,7 +87,6 @@ void menuZoo(Zoo* zoologico){
                 }
                 else{
                     bool terminado = false;
-                    int x = 0;
                     do {
                         //Manejo de entradas.
                         try {
@@ -115,7 +112,6 @@ void menuZoo(Zoo* zoologico){
                 }
                 else{
                     bool terminado = false;
-                    int x = 0;
                     do {
                         //Manejo de entradas.
                         try {
@@ -141,7 +137,6 @@ void menuZoo(Zoo* zoologico){
                 }
                 else{
                     bool terminado = false;
-                    int x = 0;
                     do {
                         //Manejo de entradas.
                         try {
