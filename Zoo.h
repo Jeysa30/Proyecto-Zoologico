@@ -28,7 +28,6 @@ public:
 
     //Metodo para buscar el animal que va a realizar la accion ingresada por el usuario
     Animal* buscarAnimalZoologico();
-
 };
 
 #endif //PROYECTO_ZOOLOGICO_ZOO_H

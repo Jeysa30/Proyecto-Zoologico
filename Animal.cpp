@@ -118,7 +118,7 @@ void Animal::elegirAlimentacion(int tipoDieta){
         this->alimento.push_back("presas");
     }
     else if(tipoDieta == 2){ // Alimento para los herviboros.
-        this->dieta = "Herviboro";
+        this->dieta = "Herbivoro";
         this->alimento.push_back("hierva");
         this->alimento.push_back("frutas");
         this->alimento.push_back("vegetales");
@@ -267,7 +267,7 @@ void Animal::modificarAlimentacion(){
         eliminarAlimento();
     }
     else if(op == 2){
-        agregarComida();
+        agregarAlimento();
     }
 
 }
@@ -310,7 +310,7 @@ void Animal::eliminarAlimento(){
 }
 
 //Metodo de la opcion 2 para agregar a la lista un alimento del animal.
-void Animal::agregarComida(){
+void Animal::agregarAlimento(){
     string agregar;
     int contador = 1;
     int contadorFinal = 1;

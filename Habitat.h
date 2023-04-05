@@ -42,8 +42,6 @@ public:
 
     // Creamos la función para ver la lista de los animales que hay en cada habitad.
     void verAnimal();
-
-
 };
 
 #endif //PROYECTO_ZOOLOGICO_HABITAT_H

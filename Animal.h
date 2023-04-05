@@ -9,7 +9,7 @@ using namespace std;
 /* Clase Animal:
  * nombre: Cada animal tendrá su respectivo nombre.
  * especieAnimal: Identificar la especie del animal al agregar.
- * dieta: Se escoge que tipo de dieta es el animal (carnivoro, herviboro ó omnivoro).
+ * dieta: Se escoge que tipo de dieta es el animal (carnivoro, herbivooro ó omnivoro).
  * id: Cada animal tendrá un número como identificación.
  * edad: Se pondrá o se irá cambiando la edad del animal.
  * cantDormir: Se le agregará la cantidad maxima que puede dormir el animal en un solo dia.
@@ -111,7 +111,7 @@ public:
     void eliminarAlimento();
 
     //Metodo que agrega un alimento a la lista de posibles alimentos del animal.
-    void agregarComida();
+    void agregarAlimento();
 };
 
 #endif //PROYECTO_ZOOLOGICO_ANIMAL_H
