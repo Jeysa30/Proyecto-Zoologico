@@ -21,19 +21,19 @@ Nuestro programa funciona con 3 clases:
 
 Estas clases interactúan entre sí para cumplir con las 5 acciones que tiene nuestro proyecto:
 
-* Agregar un habitat.
+* Agregar un habitat
   : El usuario puede agregar el habitat que desee en el zoológico; para esto se llama al método de la clase Zoo menuAgregarHabitat,
   aquí se le pide al usuario que ingrese el nombre o tipo de habitat que se va a crear, después se le pasa esta información del
   habitat al método de la clase Zoo agregarHabitat y esta lo añade al vector.
 
-* Agregar un animal.
+* Agregar un animal
   : El usuario puede agregar un animal al zoológico teniendo en cuenta que el habitat exista; para esto primero se revisa que el
   vector de Habitat no este vacío, teniendo comprobado esto se llama al método de la clase Zoo infoZoologico el cual hace una
   lista de los habitats creados y permitiendo al usuario entrar a un habitat seleccionado, para así, de esta forma guardar
   al animal creado llamando al método de la clase Habitat menuAgregarAnimal que pide la información de los atributos del animal,
   y guarda el animal con el método de la clase habitat al mapa del habitat que se seleccionó.
 
-* Modificar la alimentación del animal.
+* Modificar la alimentación del animal
   : El usuario puede modificar la alimentación del animal ingresando su id, teniendo en cuenta que haya al menos un habitat creado
   y que el animal exista; para esto, teniendo la comprobación de que existe el habitat se llama al método de la clase Zoo 
   buscarAnimalZoologico el cual le pide al usuario la id del animal, retornando su dirección de memoria, si esta dirección es
@@ -45,7 +45,7 @@ Estas clases interactúan entre sí para cumplir con las 5 acciones que tiene nu
   de los alimentos que tiene el animal y le pide que agrege un nuevo alimento teniendo en cuenta el tipo de dieta del animal, se agrega
   al vector alimento del animal y le vuelve a mostrar la lista actualizada.
 
-* Acciones del animal.
+* Acciones del animal
   : El usuario puede pedirle a un animal dentro del zoológico que realice una de las acciones básicas permitidas(Comer, Dormir, Jugar),
   para esto primero se hace la comprobación de que haya al menos un habitat en el zoológico, teniendo la comprobación de que existe el 
   habitat se llama al método de la clase Zoo buscarAnimalZoologico el cual le pide al usuario la id del animal, retornando su dirección 
@@ -62,7 +62,7 @@ Estas clases interactúan entre sí para cumplir con las 5 acciones que tiene nu
   muestra que no puede realizar esta acción y si aún no ha jugado le muestra al usuario que se acaba de realizar la acción.
 
 
-* Ver información del zoológico.
+* Ver información del zoológico
   : Le muestra al usuario la lista de los habitats y animales que hay en el zoológico; para esto primero se hace la comprobación de que haya 
   al menos un habitat en el zoológico, teniendo la comprobación de que existe un habitat se llama al método de la clase Zoo infoZoologico,
   que le lista al usuario los habitats que hay hasta el momento en el zoológico y le pide que ingrese el numero del habitat al que desea entrar
