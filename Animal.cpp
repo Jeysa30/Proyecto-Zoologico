@@ -322,8 +322,17 @@ void Animal::agregarAlimento(){
         ++contador;
     }
 
-    cout << "\nEscribe el alimento a agregar: ";
-    cin >> agregar;
+    cout << "\n\nLista de alimentos que se pueden agregar a la dieta del animal" << endl;
+    if(this->dieta == "Carnivoro"){
+        agregar = this->alimentoCarnivoro();
+    }
+    else if(this->dieta == "Herbivoro"){
+        agregar = this->alimentoHerbivoro();
+    }
+    else if(this->dieta == "Omnivoro"){
+        agregar = this->alimentoOmnivoro();
+    }
+
     alimento.push_back(agregar);
     cout << "\nEl alimento se agrego correctamente." << endl;
 
@@ -334,7 +343,9 @@ void Animal::agregarAlimento(){
     }
 }
 
-void Animal::alimentoCarnivoro(){
+// Metodo para agregar alimentos posibles del tipo de dieta Carnivoro.
+string Animal::alimentoCarnivoro(){
+    int agregar;
     map<int, string> carnivoro;
     map<int, string>::iterator itMap;
     carnivoro[1] = "aves";
@@ -346,14 +357,21 @@ void Animal::alimentoCarnivoro(){
         cout << itMap->first << ". " << itMap->second << endl;
     }
 
+    cout << "\nEscribe el numero del alimento a agregar: ";
+    cin >> agregar;
+    if(!cin.good()){
+        throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
+    }
 
-
+    return carnivoro[agregar];
 }
 
-void Animal::alimentoHerbivoro(){
+// Metodo para agregar alimentos posibles del tipo de dieta herbivoro.
+string Animal::alimentoHerbivoro(){
+    int agregar;
     map<int, string> herbivoro;
     map<int, string>::iterator itMap;
-    herbivoro[1] = "hojar";
+    herbivoro[1] = "hojas";
     herbivoro[2] = "raices";
     herbivoro[3] = "flores";
     herbivoro[4] = "nectar";
@@ -363,16 +381,26 @@ void Animal::alimentoHerbivoro(){
     for(itMap = herbivoro.begin(); itMap != herbivoro.end(); itMap++){
         cout << itMap->first << ". " << itMap->second << endl;
     }
+
+    cout << "\nEscribe el numero del alimento a agregar: ";
+    cin >> agregar;
+    if(!cin.good()){
+        throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
+    }
+
+    return herbivoro[agregar];
 }
 
-void Animal::alimentoOmnivoro() {
+// Metodo para agregar alimentos posibles del tipo de dieta omnivoro.
+string Animal::alimentoOmnivoro() {
+    int agregar;
     map<int, string> omnivoro;
     map<int, string>::iterator itMap;
     omnivoro[1] = "aves";
     omnivoro[2] = "insectos";
     omnivoro[3] = "huevos";
     omnivoro[4] = "gusanos";
-    omnivoro[5] = "hojar";
+    omnivoro[5] = "hojas";
     omnivoro[6] = "raices";
     omnivoro[7] = "flores";
     omnivoro[8] = "nectar";
@@ -383,4 +411,12 @@ void Animal::alimentoOmnivoro() {
     for(itMap = omnivoro.begin(); itMap != omnivoro.end(); itMap++){
         cout << itMap->first << ". " << itMap->second << endl;
     }
+
+    cout << "\nEscribe el numero del alimento a agregar: ";
+    cin >> agregar;
+    if(!cin.good()){
+        throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
+    }
+
+    return omnivoro[agregar];
 }

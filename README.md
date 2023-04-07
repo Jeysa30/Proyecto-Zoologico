@@ -42,8 +42,9 @@ Estas clases interactúan entre sí para cumplir con las 5 acciones que tiene nu
   ingresa la primera opción se llama al método de la clase animal eliminarAlimento que le muestra al usuario la lista de los alimentos
   que tiene el animal y le pide el alimento que quiere eliminar de esa lista y se elimina del vector alimento del animal, por el caso
   contrario, si el usuario selecciona la opción 2 se llama al método de la clase Animal agregarAlimento, que también muestra la lista
-  de los alimentos que tiene el animal y le pide que agrege un nuevo alimento teniendo en cuenta el tipo de dieta del animal, se agrega
-  al vector alimento del animal y le vuelve a mostrar la lista actualizada.
+  de los alimentos que tiene el animal y le pide que agrege un nuevo alimento que llama otro metodo teniendo en cuenta el tipo de dieta 
+  del animal, que muestra una lista de los posibles alimentos que puede tener el animal(alimentoCarnivoro, alimentoHerbivoro, alimentoOmnivoro), 
+  se agrega al vector alimento del animal y le vuelve a mostrar la lista actualizada.
 
 * Acciones del animal
   : El usuario puede pedirle a un animal dentro del zoológico que realice una de las acciones básicas permitidas(Comer, Dormir, Jugar),

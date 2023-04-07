@@ -114,11 +114,10 @@ public:
     //Metodo que agrega un alimento a la lista de posibles alimentos del animal.
     void agregarAlimento();
 
-    void alimentoCarnivoro();
-
-    void alimentoHerbivoro();
-
-    void alimentoOmnivoro();
+    //Metodos para agregar alimentos segun el tipo de dieta del animal
+    string alimentoCarnivoro();
+    string alimentoHerbivoro();
+    string alimentoOmnivoro();
 };
 
 #endif //PROYECTO_ZOOLOGICO_ANIMAL_H
