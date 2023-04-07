@@ -2,6 +2,7 @@
 #define PROYECTO_ZOOLOGICO_ANIMAL_H
 #include <iostream>
 #include <vector>
+#include <map>
 #include <limits>
 
 using namespace std;
@@ -112,6 +113,12 @@ public:
 
     //Metodo que agrega un alimento a la lista de posibles alimentos del animal.
     void agregarAlimento();
+
+    void alimentoCarnivoro();
+
+    void alimentoHerbivoro();
+
+    void alimentoOmnivoro();
 };
 
 #endif //PROYECTO_ZOOLOGICO_ANIMAL_H

@@ -333,3 +333,54 @@ void Animal::agregarAlimento(){
         ++contadorFinal;
     }
 }
+
+void Animal::alimentoCarnivoro(){
+    map<int, string> carnivoro;
+    map<int, string>::iterator itMap;
+    carnivoro[1] = "aves";
+    carnivoro[2] = "insectos";
+    carnivoro[3] = "huevos";
+    carnivoro[4] = "gusanos";
+
+    for(itMap = carnivoro.begin(); itMap != carnivoro.end(); itMap++){
+        cout << itMap->first << ". " << itMap->second << endl;
+    }
+
+
+
+}
+
+void Animal::alimentoHerbivoro(){
+    map<int, string> herbivoro;
+    map<int, string>::iterator itMap;
+    herbivoro[1] = "hojar";
+    herbivoro[2] = "raices";
+    herbivoro[3] = "flores";
+    herbivoro[4] = "nectar";
+    herbivoro[5] = "polen";
+    herbivoro[6] = "corteza";
+
+    for(itMap = herbivoro.begin(); itMap != herbivoro.end(); itMap++){
+        cout << itMap->first << ". " << itMap->second << endl;
+    }
+}
+
+void Animal::alimentoOmnivoro() {
+    map<int, string> omnivoro;
+    map<int, string>::iterator itMap;
+    omnivoro[1] = "aves";
+    omnivoro[2] = "insectos";
+    omnivoro[3] = "huevos";
+    omnivoro[4] = "gusanos";
+    omnivoro[5] = "hojar";
+    omnivoro[6] = "raices";
+    omnivoro[7] = "flores";
+    omnivoro[8] = "nectar";
+    omnivoro[9] = "polen";
+    omnivoro[10] = "corteza";
+    omnivoro[11] = "miel";
+
+    for(itMap = omnivoro.begin(); itMap != omnivoro.end(); itMap++){
+        cout << itMap->first << ". " << itMap->second << endl;
+    }
+}
