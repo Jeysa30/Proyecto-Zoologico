@@ -30,17 +30,6 @@ void Habitat::setCantAnimales(int cantAnimales){
     this->cantAnimales = cantAnimales;
 }
 
-//Funcion para comprobar que las entradas esten entre los valores max y min.
-void comprobacionEntradas(int* cant, int max, int min){
-    while(*cant > max || *cant < min){
-        cout << "\nSe ingreso un valor no permitido, ingrese un valor nuevamente: " << endl;
-        cin >> *cant;
-        if(!cin.good()){
-            throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
-        }
-    }
-}
-
 // Creamos el metodo para agregar un animal a un habitat existente.
 void Habitat::menuAgregarAnimal(int id){
     string nombre, especieAnimal;

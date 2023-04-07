@@ -1,5 +1,7 @@
 #include "Animal.h"
 
+void comprobacionEntradas(int* cant, int max, int min);
+
 Animal::Animal(string nombre,string especieAnimal, int id, int edad, int estadoSalud, int cantDormir, int cantComer){
     this->nombre = nombre;
     this->especieAnimal = especieAnimal;
@@ -362,6 +364,7 @@ string Animal::alimentoCarnivoro(){
     if(!cin.good()){
         throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
     }
+    comprobacionEntradas(&agregar, 4, 1);
 
     return carnivoro[agregar];
 }
@@ -387,6 +390,7 @@ string Animal::alimentoHerbivoro(){
     if(!cin.good()){
         throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
     }
+    comprobacionEntradas(&agregar, 6, 1);
 
     return herbivoro[agregar];
 }
@@ -417,6 +421,17 @@ string Animal::alimentoOmnivoro() {
     if(!cin.good()){
         throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
     }
+    comprobacionEntradas(&agregar, 11, 1);
 
     return omnivoro[agregar];
+}
+//Funcion para comprobar que las entradas esten entre los valores max y min.
+void comprobacionEntradas(int* cant, int max, int min){
+    while(*cant > max || *cant < min){
+        cout << "\nSe ingreso un valor no permitido, ingrese un valor nuevamente: " << endl;
+        cin >> *cant;
+        if(!cin.good()){
+            throw invalid_argument("se ingreso un argumento invalido y se espera un numero entero");
+        }
+    }
 }

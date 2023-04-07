@@ -120,4 +120,7 @@ public:
     string alimentoOmnivoro();
 };
 
+//Funcion para comprobar que las entradas esten entre los valores max y min.
+void comprobacionEntradas(int* cant, int max, int min);
+
 #endif //PROYECTO_ZOOLOGICO_ANIMAL_H
