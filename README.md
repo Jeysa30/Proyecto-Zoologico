@@ -73,14 +73,5 @@ Estas clases interactúan entre sí para cumplir con las 5 acciones que tiene nu
 
 # Evidencia del funcionamiento del programa
 
-<figure>
-    <img src="C:\Users\jeysa nahara\Pictures\Evidencia1.png"
-         alt="Evidencia de creación del habitat">
-    <figcaption>Creación del habitat polar.</figcaption>
-</figure>
-
-<figure>
-    <img src="C:\Users\jeysa nahara\Pictures\Evidencia2.png"
-         alt="Evidencia de creación del animal en un habitat seleccionado">
-    <figcaption>Creación del animal y agregarlo al habitat polar.</figcaption>
-</figure>
+> El siguiente link mostrará las imagenes del funcionamiento del programa:
+> https://docs.google.com/document/d/1EQ50PiGlblHpMh-G_w4SVCTV8PexLu7N3yI0jrkrDqw/edit?usp=sharing
