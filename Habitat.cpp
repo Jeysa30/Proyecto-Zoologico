@@ -102,8 +102,8 @@ void Habitat::verAnimal(){
     }
     else{
         map<int, Animal*>::iterator itMap = this->getAnimales().begin();
-        Animal* animalVer = itMap->second;
         for (int itM = 0; itM < this->cantAnimales; ++itMap, itM++){
+            Animal* animalVer = itMap->second;
             cout << "\nEl animal " << animalVer->getEspecieAnimal() << " con id " << animalVer->getId() << ", se llama " << animalVer->getNombre();
             cout << ", con edad " << animalVer->getEdad() << ", es un animal tipo " << animalVer->getDieta() << endl;
         }
