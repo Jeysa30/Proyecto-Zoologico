@@ -13,6 +13,7 @@ using namespace std;
  * dieta: Se escoge que tipo de dieta es el animal (carnivoro, herbivooro ó omnivoro).
  * id: Cada animal tendrá un número como identificación.
  * edad: Se pondrá o se irá cambiando la edad del animal.
+ * estadoSalud: Se pone el estado de salud del animal en un rango del 1 al 10.
  * cantDormir: Se le agregará la cantidad maxima que puede dormir el animal en un solo dia.
  * cantComer: Se le agregará la cantidad en Kg de comida que puede comer el animal en un solo dia.
  * cantDormirTemporal: Es la cantidad de horas que le quedan al animal por dormir en el dia.
